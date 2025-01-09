@@ -1,0 +1,12 @@
+
+<!-- views/recipes/recipes.ejs -->
+<head>
+    <link rel="stylesheet" href="/styles/recipes.css">
+</head>
+<h1><%= recipe.title %></h1>
+<p><strong>Ingredients:</strong></p>
+<p><%= recipe.ingredients %></p>
+<p><strong>Instructions:</strong></p>
+<p><%= recipe.instructions %></p>
+<a href="/recipes/<%= recipe.id %>/edit">Edit</a>
+<a href="/recipes">Back to Recipes</a>

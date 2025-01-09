@@ -1,0 +1,16 @@
+<!-- views/recipes/recipes.ejs -->
+<!-- views/recipes/recipes.ejs -->
+<head>
+    <link rel="stylesheet" href="/styles/recipes.css">
+</head>
+<h1>Recipes</h1>
+<ul>
+    <% recipes.forEach(recipe => { %>
+        <li>
+            <h3><%= recipe.title %></h3>
+            <p>Ingredients: <%= recipe.ingredients %></p>
+            <p>Instructions: <%= recipe.instructions %></p>
+        </li>
+    <% }); %>
+</ul>
+<a href="/recipes/create">Add a New Recipe</a>

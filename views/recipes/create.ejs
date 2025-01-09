@@ -1,0 +1,16 @@
+<!-- views/recipes/create.ejs -->
+<!-- views/recipes/recipes.ejs -->
+<head>
+    <link rel="stylesheet" href="/styles/recipes.css">
+</head>
+<h1>Create a New Recipe</h1>
+
+<form action="/recipes" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"><br><br>
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients"></textarea><br><br>
+    <label for="instructions">Instructions:</label>
+    <textarea id="instructions" name="instructions"></textarea><br><br>
+    <button type="submit">Create Recipe</button>
+</form>

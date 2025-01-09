@@ -1,0 +1,29 @@
+<!-- views/layouts/layout.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recipes">Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <% if (locals.content) { %>
+            <%= locals.content %>
+        <% } else { %>
+            <!-- Default content -->
+        <% } %>
+    </main>
+    <footer>
+        <p>&copy; 2023 Recipes</p>
+    </footer>
+</body>
+</html>
+

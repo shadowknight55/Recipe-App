@@ -1,0 +1,26 @@
+/* public/styles/recipes.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #00698f;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #00698f;
+}
+
+p {
+    color: #333;
+}
