@@ -1,29 +1,27 @@
-<!-- views/layouts/layout.ejs -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Recipes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Recipe App' %></title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/recipes.css">
 </head>
 <body>
     <header>
+        <h1>Recipe App</h1>
         <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/recipes">Recipes</a></li>
-            </ul>
+            <a href="/recipes">Home</a>
+            <a href="/recipes/create">Create Recipe</a>
         </nav>
     </header>
+
     <main>
-        <% if (locals.content) { %>
-            <%= locals.content %>
-        <% } else { %>
-            <!-- Default content -->
-        <% } %>
+        <%- body %> <!-- This is where the content of individual views will be injected -->
     </main>
+
     <footer>
-        <p>&copy; 2023 Recipes</p>
+        <p>&copy; 2023 Recipe App. All rights reserved.</p>
     </footer>
 </body>
 </html>
-

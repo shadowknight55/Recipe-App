@@ -1,21 +1,15 @@
-<!-- views/recipes/index.ejs -->
-<!-- views/recipes/recipes.ejs -->
-<head>
-    <link rel="stylesheet" href="/styles/recipes.css">
-</head>
-<%- include('../layouts/layout') %>
-
-<!-- views/recipes/index.ejs -->
 <h1>Recipes</h1>
 <ul>
     <% recipes.forEach(recipe => { %>
         <li>
-            <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
+            <h3><%= recipe.title %></h3>
+            <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+            <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
+            <a href="/recipes/<%= recipe.id %>">View Details</a>
+            <a href="/recipes/<%= recipe.id %>/edit">Edit</a>
             <form action="/recipes/<%= recipe.id %>/delete" method="POST" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
-            <a href="/recipes/<%= recipe.id %>/edit">Edit</a>
         </li>
-    <% }); %>
+    <% }) %>
 </ul>
-<a href="/recipes/create">Add a New Recipe</a>
